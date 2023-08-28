@@ -1,0 +1,3 @@
+SGD Value error: 
+ epoch: 1 cross entropy loss: 10.308242513098987 
+ best cross entropy loss: 1.0686930285784328

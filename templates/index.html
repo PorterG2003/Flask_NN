@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask HTML Template</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="PixiBox"></div>
+    <header>
+        <div id='top_header'>
+            <button id="start_training">
+                <i class="fa fa-play"></i>
+            </button>
+            <button id="stop_training">
+                <i class="fa fa-stop"></i>
+            </button>
+            <button id="new_nn">
+                <i class="fa fa-refresh"></i>
+            </button>
+            <label id="learning_rate_label" for="">Learning Rate</label>
+            <input id="learning_rate" type="number" value=".01">
+            <label id="batch_size_label" for="">Batch Size</label>
+            <input id="batch_size" type="number" value="256">
+        </div>
+        <div id='bottom_header'>
+            <div id="input_column_controls" class="layer_controls">
+                <span class="range_label">Display Range</span>
+                <span class="min_label">Min</span>
+                <input class="min_input" type="number">
+                <span class="max_label">Max</span>
+                <input class="max_input" type="number">
+            </div>
+            <div id="hidden1_column_controls" class="layer_controls">
+                <span class="range_label">Display Range</span>
+                <span class="min_label">Min</span>
+                <input class="min_input" type="number">
+                <span class="max_label">Max</span>
+                <input class="max_input" type="number">
+            </div>
+            <div id="hidden2_column_controls" class="layer_controls">
+                <span class="range_label">Display Range</span>
+                <span class="min_label">Min</span>
+                <input class="min_input" type="number">
+                <span class="max_label">Max</span>
+                <input class="max_input" type="number">
+            </div>
+            <div id="output_column_controls" class="layer_controls">
+                <span class="range_label">Display Range</span>
+                <span class="min_label">Min</span>
+                <input class="min_input" type="number">
+                <span class="max_label">Max</span>
+                <input class="max_input" type="number">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="input_column" class="layer_column">
+        </div>
+        <div id="hidden1_column" class="layer_column">
+        </div>
+        <div id="hidden2_column" class="layer_column">
+        </div>
+        <div id="output_column" class="layer_column">
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

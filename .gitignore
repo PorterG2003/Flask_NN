@@ -1,0 +1,17 @@
+# DS_Store
+.DS_Store
+
+# Database
+Database/
+
+# Saved NNs
+saved_nns/
+
+# Tuning Data
+tuning_data/
+
+# Virtual Environment
+venv/
+
+# Logs
+*.log
